@@ -1,2 +1,3 @@
 # Dio-Java-Studys
-Estudos em Java 
+Repositorio para salvar e compartilhar estudos e anotações sobre a linguagem Java
+e suas features
