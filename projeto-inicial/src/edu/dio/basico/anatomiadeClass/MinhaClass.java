@@ -1,3 +1,4 @@
+package edu.dio.anatomiadeClass;
 public class MinhaClass {
   public static void main(String[] args) {
     String primeiroNome = "Daniel";
