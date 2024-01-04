@@ -1,9 +1,16 @@
 package edu.dio.basico.anatomiadeClass;
+
+import java.util.Locale;
+import java.util.Scanner;
+
 public class MinhaClass {
   public static void main(String[] args) {
-    String primeiroNome = "Daniel";
-    String segundoNome =  "Junior";
-
+    
+    Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+    System.out.println("Digite seu primeiro nome: ");
+    String primeiroNome = sc.next() ;
+    System.out.println("Digite seu segundo nome: ");
+    String segundoNome = sc.next() ;
     String nomeCompleto =  nomeCompleto(primeiroNome, segundoNome);
     System.out.println(nomeCompleto);
   }
