@@ -1,17 +1,25 @@
 package MSN;
 
+import apps.FacebookMenssengerSender;
+import apps.MSNMenssenger;
+import apps.MenssengerSender;
+import apps.TelegramMenssenger;
+
 public class ComputadorPedrinho {
     public static void main(String[] args) {
-        MSNMenssenger msn  =  new MSNMenssenger();
-        msn.enviarMensagem();
-        msn.receberMensagem();
+        MenssengerSender smi = null;
 
-        FacebookMenssengerSender fcb  =  new FacebookMenssengerSender();
-        fcb.enviarMensagem();
-        fcb.receberMensagem();
+        String chooseApp = "msn";
 
-        TelegramMenssenger telegram  =  new TelegramMenssenger();
-        telegram.enviarMensagem();
-        telegram.receberMensagem();
+        if(chooseApp.equals("msn"))
+            smi = new MSNMenssenger();
+        else if(chooseApp.equals("fbm"))
+            smi = new FacebookMenssengerSender();
+        else if (chooseApp.equals("tlg"))
+            smi = new TelegramMenssenger();
+
+        smi.enviarMensagem();
+        smi.receberMensagem();
+
     }
 }

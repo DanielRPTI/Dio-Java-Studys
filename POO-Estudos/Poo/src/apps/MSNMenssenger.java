@@ -1,8 +1,9 @@
-package MSN;
+package apps;
 
-public class MSNMenssenger extends MenssengerSender{
+public class MSNMenssenger extends MenssengerSender {
     @Override
     public void enviarMensagem() {
+        validarConexao();
         System.out.println("Mensagem enviada pelo MSN Mensseger");
     }
 

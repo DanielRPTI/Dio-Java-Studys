@@ -1,8 +1,9 @@
-package MSN;
+package apps;
 
 public class FacebookMenssengerSender extends MenssengerSender {
     @Override
     public void enviarMensagem() {
+        validarConexao();
         System.out.println("Mensagem enviada pelo Facebook Mensseger");
     }
 

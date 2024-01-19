@@ -1,8 +1,9 @@
-package MSN;
+package apps;
 
-public class TelegramMenssenger extends MenssengerSender{
+public class TelegramMenssenger extends MenssengerSender {
     @Override
     public void enviarMensagem() {
+        validarConexao();
         System.out.println("Mensagem enviada pelo Telegram ");
     }
 
