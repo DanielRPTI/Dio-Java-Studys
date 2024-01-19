@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Desafio-Iphone-Classes/Desafio-Iphone-Classes.iml" filepath="$PROJECT_DIR$/Desafio-Iphone-Classes/Desafio-Iphone-Classes.iml" />
       <module fileurl="file://$PROJECT_DIR$/Poo.iml" filepath="$PROJECT_DIR$/Poo.iml" />
     </modules>
   </component>
