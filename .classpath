@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="estruturas-de-repeticao/src"/>
+	<classpathentry kind="src" path="introducao-estrutura-condicionais/src"/>
+	<classpathentry kind="src" path="POO-Estudos/Poo/BancoDigital-POO/src"/>
+	<classpathentry kind="src" path="POO-Estudos/Poo/Desafio-Iphone-Classes/src"/>
+	<classpathentry kind="src" path="POO-Estudos/Poo/src"/>
+	<classpathentry kind="src" path="projeto-inicial/src"/>
+	<classpathentry kind="src" path="tratamento-de-execoes/src"/>
+	<classpathentry kind="output" path="POO-Estudos/Poo/bin"/>
+</classpath>

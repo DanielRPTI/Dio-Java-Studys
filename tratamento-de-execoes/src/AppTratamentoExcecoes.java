@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.InputMismatchException;
 import java.util.Locale;
 
-public class App {
+public class AppTratamentoExcecoes {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in).useLocale(Locale.US);
         try {
