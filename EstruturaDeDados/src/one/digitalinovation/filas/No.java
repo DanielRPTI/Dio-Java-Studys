@@ -6,6 +6,7 @@ public class No {
 	private No refNo;
 	
 	public No() {
+
 	}
 	
 	@Override

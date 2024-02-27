@@ -15,8 +15,6 @@ public class Main {
 		No<String> no4 = new No<>("Content no4");
 		no3.setnextNo(no4);
 		
-		System.out.println(no1.getnextNo());
-		System.out.println(no2);
 		
 		//Conceito sobre no , sempre estara ligado ao proxima apenas o ultimo nó que aponta para null
 		//por nao seguir adiante 
