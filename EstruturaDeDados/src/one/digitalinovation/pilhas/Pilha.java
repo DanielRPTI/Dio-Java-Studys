@@ -15,8 +15,8 @@ public class Pilha {
 	}
 
 	/*
-	 * Já no metodo push ele irá ser responsavel por fazer a inserção Para isso
-	 * criacos uma variavel auxiliar do tipo No para receber o valor ref de entrada
+	 * Já no metodo push ele irá ser responsavel por fazer a inserção ,Para isso
+	 * criamos uma variavel auxiliar do tipo No para receber o valor ref de entrada
 	 * Esse valor ref seguindo a logica irá receber o novoNo que será setado a
 	 * referencia a variavel refAuxiliar no setReNos
 	 */
