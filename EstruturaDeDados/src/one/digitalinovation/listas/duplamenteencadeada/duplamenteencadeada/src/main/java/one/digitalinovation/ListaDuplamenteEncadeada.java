@@ -51,6 +51,25 @@ public class ListaDuplamenteEncadeada<T> {
         tamanhoLista++;
     }
 
+    public void remove(int index){
+        if (index == 0){
+            primeiroNo = primeiroNo.getNoProximo();
+            if (primeiroNo != null){
+                primeiroNo.setNoPrevio(null);
+            }
+            //se nao for o primeiro no ele busca no getNo para realizar a remoção no meio da Lista , verificando se nao é o ultimo no , se for o ultimo no o else é usado atribuindo o valor do no auxiliar ao ultimo no
+        }else{
+            NoDuplo<T> noAuxiliar = getNo(index);
+            noAuxiliar.getNoPrevio().setNoProximo(noAuxiliar.getNoProximo());
+            if(noAuxiliar != ultimoNo){
+                noAuxiliar.getNoProximo().setNoPrevio(noAuxiliar.getNoPrevio());
+            }else{
+                ultimoNo = noAuxiliar;
+            }
+        }
+        this.tamanhoLista--;
+    }
+
     private NoDuplo<T> getNo(int index){
         NoDuplo<T> noAuxiliar = primeiroNo;
 
