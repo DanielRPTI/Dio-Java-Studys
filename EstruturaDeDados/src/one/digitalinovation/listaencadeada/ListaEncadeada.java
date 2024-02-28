@@ -83,4 +83,15 @@ public class ListaEncadeada<T> {
 		return refInput == null ? true : false;
 	}
 
+	@Override
+	public String toString() {
+		String strReturn ="";
+		No<T> noAuxiliar = refInput;
+		for(int i = 0; i < this.size(); i++) {
+			strReturn += "No{content=" + noAuxiliar.getContent() + "} -->";
+			noAuxiliar = noAuxiliar.getNextNo();
+		}
+		strReturn += "null";
+		return strReturn;
+	}
 }
