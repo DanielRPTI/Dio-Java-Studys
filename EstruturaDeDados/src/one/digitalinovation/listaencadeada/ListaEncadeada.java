@@ -32,7 +32,7 @@ public class ListaEncadeada<T> {
 		validatedIndex(index);
 		No<T> noAuxiliar = refInput;
 		No<T> noReturn = null;
-		for (int i = 0; i < this.size() - 1; i++) {
+		for (int i = 0; i <= index; i++) {
 			noReturn = noAuxiliar;
 			noAuxiliar = noAuxiliar.getNextNo();
 		}
@@ -88,7 +88,7 @@ public class ListaEncadeada<T> {
 		String strReturn ="";
 		No<T> noAuxiliar = refInput;
 		for(int i = 0; i < this.size(); i++) {
-			strReturn += "No{content=" + noAuxiliar.getContent() + "} -->";
+			strReturn += "No{content=" + noAuxiliar.getContent() + "}-->";
 			noAuxiliar = noAuxiliar.getNextNo();
 		}
 		strReturn += "null";
