@@ -8,6 +8,21 @@ public class ListaEncadeada<T> {
 		this.refInput = null;
 	}
 
+	public void add(T contet) {
+		No<T> newNo = new No<>(contet);
+		if(this.isEmpty()) {
+			refInput = newNo;
+			return;
+		}
+		
+		No<T> noAuxiliar = refInput;
+		for(int i = 0; i < this.size()-1; i++) {
+			noAuxiliar = noAuxiliar.getNextNo();
+		}
+		noAuxiliar.setNextNo(newNo);
+		
+	}
+	
 	public int size() {
 		int sizeList = 0;
 		No<T> refAuxiliar = refInput;
