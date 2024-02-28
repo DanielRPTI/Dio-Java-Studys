@@ -22,6 +22,10 @@ public class ListaEncadeada<T> {
 		noAuxiliar.setNextNo(newNo);
 
 	}
+	
+	public T get(int index) {
+		return getNo(index).getContent();
+	}
 
 	private No<T> getNo(int index) {
 
@@ -33,6 +37,19 @@ public class ListaEncadeada<T> {
 			noAuxiliar = noAuxiliar.getNextNo();
 		}
 		return noReturn;
+	}
+	
+	public T remove(int index) {
+		No<T> noPivo = this.getNo(index);
+		if(index == 0) {
+			refInput = noPivo.getNextNo();
+			return noPivo.getContent();
+			
+		}
+		
+		No<T> noAnterior = getNo(index - 1);
+		noAnterior.setNextNo(noPivo.getNextNo());
+		return noPivo.getContent();
 	}
 
 	public int size() {
