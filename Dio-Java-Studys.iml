@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/POO-Estudos/Poo/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/POO-Estudos/Poo/BancoDigital-POO/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/POO-Estudos/Poo/Desafio-Iphone-Classes/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/POO-Estudos/Poo/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/estruturas-de-repeticao/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/introducao-estrutura-condicionais/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/projeto-inicial/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tratamento-de-execoes/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
