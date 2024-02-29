@@ -5,6 +5,12 @@ public class ListaCircular<T> {
     private No<T> cauda;
     private int tamanhoLista;
 
+    public ListaCircular() {
+        this.cauda = null;
+        this.cabeca = null;
+        this.tamanhoLista = 0;
+    }
+
     /*
     * Neste get no de lista circular verificamos primeiramente se nossa lista está vazia
     * depois verificamos se nosso index informado é 0 se for ele retorna o no da cauda
@@ -51,6 +57,27 @@ public class ListaCircular<T> {
             noAuxiliar.setNoProximo(noAuxiliar.getNoProximo().getNoProximo());
         }
         this.tamanhoLista--;
+    }
+
+    /*Metodo add()
+    *  Iniciamos uma variavel do tipo Objeto No<T> , esse novoNo recebe o parametro conteudo
+    * verificamos se o tamanho da lista é equivalente a 0 , se sim adicionamos o novoNo a cabeça
+    * depois nossa cauda recebe o valor da nossa cabeca e por fim direcionamos o noProximo da cabeca para nossa cauda
+    * se não for == 0 realizamos que o novoNo passar ser a nossa cauda pois ele é adicionado atrás da nossa cauda
+    * o nosso antigo no cabeca apontara para sua nova cauda e a cauda ira receber nosso novoNo.
+    */
+    public void add(T conteudo) {
+        No<T> novoNo = new No<>(conteudo);
+        if (this.tamanhoLista == 0){
+            this.cabeca = novoNo;
+            this.cauda = this.cabeca;
+            this.cabeca.setNoProximo(this.cauda);
+        }else {
+            novoNo.setNoProximo(this.cauda);
+            this.cabeca.setNoProximo(novoNo);
+            this.cauda = novoNo;
+        }
+        this.tamanhoLista++;
     }
     public boolean isEmpty(){
         return this.tamanhoLista == 0 ? true : false;
