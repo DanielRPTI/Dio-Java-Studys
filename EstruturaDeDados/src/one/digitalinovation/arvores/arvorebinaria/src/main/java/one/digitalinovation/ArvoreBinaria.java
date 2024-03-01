@@ -13,6 +13,12 @@ public class ArvoreBinaria <T extends  Comparable<T>> {
         this.raiz = inserir(raiz, novoNo);
     }
 
+    /*Inserir private
+    * aqui recebemos o nosso no atual e nosso novoNo para realizar a inserção
+    * iniciamos verificando se a raiz informada no inserir publico é igual a null , se for ele irá iniciar nossa raiz com o valor do novoNo
+    * Se nao se o novoNo for menor que o conteudo do no atual que é nossa raiz , setamos o novoNo a esquerda no Noautal , chamando o metodo inserir
+    * por fim se o novoNo for maior que o no atual ele é setado ao no da direita.
+    */
     private BinNo<T> inserir(BinNo<T> atual, BinNo<T> novoNo){
         if(atual == null){
             return novoNo;
@@ -23,5 +29,46 @@ public class ArvoreBinaria <T extends  Comparable<T>> {
         }
         return atual;
     }
+
+    //Metodo In Orderm verifica o os nos antes de mostralos , primeiramente a esquerda depois a direita
+    public void exibirInOrdem(){
+        System.out.println("\n Exibindo InOrdem");
+        exibirInOrdem(this.raiz);
+    }
+    private void exibirInOrdem(BinNo<T> atual){
+        if(atual != null){
+            exibirInOrdem(atual.getNoEsq());
+            System.out.println(atual.getConteudo() + ", ");
+            exibirInOrdem(atual.getNoDir());
+            System.out.println(atual.getConteudo() + ", ");
+        }
+    }
+
+    //Metodo PosOrdem visita primeiro os Nos e mostra depois o conteudo
+    public void exibirPosOrdem(){
+        System.out.println("\n Exibindo PosOrdem");
+        exibirPosOrdem(this.raiz);
+    }
+    private void exibirPosOrdem(BinNo<T> atual){
+        if(atual != null){
+            exibirInOrdem(atual.getNoEsq());
+            exibirInOrdem(atual.getNoDir());
+            System.out.println(atual.getConteudo() + ", ");
+        }
+    }
+
+    //Metodo Pre Ordem ele mostra o conteudo antes de visitar os Nos
+    public void exibirPreOrdem(){
+        System.out.println("\n Exibindo PreOrdem");
+        exibirPreOrdem(this.raiz);
+    }
+    private void exibirPreOrdem(BinNo<T> atual){
+        if(atual != null){
+            System.out.println(atual.getConteudo() + ", ");
+            exibirInOrdem(atual.getNoEsq());
+            exibirInOrdem(atual.getNoDir());
+        }
+    }
+
 
 }
