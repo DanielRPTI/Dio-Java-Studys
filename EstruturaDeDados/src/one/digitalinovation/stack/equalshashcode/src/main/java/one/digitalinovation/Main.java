@@ -1,0 +1,23 @@
+package one.digitalinovation;
+
+//Lib de Stack(pilha) funcionamento parecido com a logica de pilha
+import java.util.Stack;
+
+public class Main {
+    public static void main(String[] args) {
+        Stack<Carro> stackCarros = new Stack<>();
+
+        stackCarros.push(new Carro("Ford"));
+        stackCarros.push(new Carro("Jeep"));
+        stackCarros.push(new Carro("Fiat"));
+
+        System.out.println(stackCarros);
+        System.out.println(stackCarros.pop());
+        System.out.println(stackCarros);
+
+        //Metodo Peek pega o ultimo elemento da pilha porém não apaga da lista
+        System.out.println(stackCarros.peek());
+        System.out.println(stackCarros);
+        System.out.println(stackCarros.empty());
+    }
+}
