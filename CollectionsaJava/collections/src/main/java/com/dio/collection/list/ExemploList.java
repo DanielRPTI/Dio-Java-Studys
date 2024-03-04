@@ -103,7 +103,17 @@ Para você: Resolva esses exercícios utilizando os métodos da implementação 
         System.out.println("Mostre a primeira nota da nova lista removendo-o: ");
 */
         LinkedList<Double> notas2 = new LinkedList<>();
-
+        notas2.add(7.0);
+        notas2.add(8.5);
+        notas2.add(9.3);
+        notas2.add(5.0);
+        notas2.add(7.0);
+        notas2.add(0.0);
+        notas2.add(3.6);
+        System.out.println("Notas 2: \n" + notas2);
+        System.out.println("Primeira Nota da Lista 2: " + notas2.get(0));
+        System.out.println("Nota removida : " + notas2.remove(0));
+        System.out.println("Notas 2: \n" + notas2);
 
     }
 }
