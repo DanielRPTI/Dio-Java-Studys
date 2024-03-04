@@ -9,9 +9,11 @@ class ExemploList {
 //      List notas = new ArrayList(); //antes do java 5
 //      ArrayList<Double> notas = new ArrayList<>();
 //      List<Double> notas = new ArrayList<>(Arrays.asList(7d, 8.5, 9.3, 5d, 7d, 0d, 3.6));
-        /*List<Double> notas = Arrays.asList(7d, 8.5, 9.3, 5d, 7d, 0d, 3.6);
-        notas.add(10d);
-        System.out.println(notas);*/
+        //forma limitada Arrays.asList , não permitindo adicionar mais listas se
+//        List<Double> notas = Arrays.asList(7d, 8.5, 9.3, 5d, 7d, 0d, 3.6);
+//        notas.add(10d);
+//        System.out.println(notas);
+        //Lis.of = torna a lista imutavel para remoção e adição
         /*List<Double> notas = List.of(7d, 8.5, 9.3, 5d, 7d, 0d, 3.6);
         notas.add(1d);
         notas.remove(5d);
@@ -19,7 +21,7 @@ class ExemploList {
 
         System.out.println("Crie uma lista e adicione as sete notas: ");
 
-        List<Double> notas = new ArrayList<Double>(); //Generics(jdk 5) - Diamond Operator(jdk 7)
+        List<Double> notas = new ArrayList<>(); //Generics(jdk 5) - Diamond Operator(jdk 7)
         notas.add(7.0);
         notas.add(8.5);
         notas.add(9.3);
@@ -28,29 +30,36 @@ class ExemploList {
         notas.add(0.0);
         notas.add(3.6);
         System.out.println(notas.toString());
-
+        //Index of mostra a posição do indice do array
         System.out.println("Exiba a posição da nota 5.0: " + notas.indexOf(5d));
 
         System.out.println("Adicione na lista a nota 8.0 na posição 4: ");
         notas.add(4, 8d);
         System.out.println(notas);
 
+        //Metodo set para substituição de um elemento , informamos o index e o valor que quer trocar no local informado do indice
         System.out.println("Substitua a nota 5.0 pela nota 6.0: ");
         notas.set(notas.indexOf(5d), 6.0);
         System.out.println(notas);
 
+        //Verificação de o valor está na lista
         System.out.println("Confira se a nota 5.0 está na lista: " + notas.contains(5d));
 
-        /*System.out.println("Exiba todas as notas na ordem em que foram informados: ");
-        for (Double nota : notas) System.out.println(nota);*/
+//        System.out.println("Exiba todas as notas na ordem em que foram informados: ");
+          //modelo foreach
+//        for (Double nota : notas) System.out.println(nota);
 
+        //Elemento Get , pegamos o valor da nota no indice informado no get
         System.out.println("Exiba a terceira nota adicionada: " + notas.get(2));
         System.out.println(notas.toString());
 
+        //Metodo da classe collections , que realiza a exibição do menor ou maior valor
         System.out.println("Exiba a menor nota: " + Collections.min(notas));
 
         System.out.println("Exiba a maior nota: " + Collections.max(notas));
 
+        //Metodo Iterator realiza a interação para realizar a soma
+        //Ele verifica no while sempre o proximo a frente e vai iterando na variavel soma com o next quando retornar o false ele finaliza o calculo
         Iterator<Double> iterator = notas.iterator();
         Double soma = 0d;
         while(iterator.hasNext()){
@@ -93,6 +102,8 @@ Para você: Resolva esses exercícios utilizando os métodos da implementação 
 
         System.out.println("Mostre a primeira nota da nova lista removendo-o: ");
 */
+        LinkedList<Double> notas2 = new LinkedList<>();
+
 
     }
 }
