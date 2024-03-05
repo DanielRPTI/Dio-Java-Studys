@@ -58,11 +58,18 @@ public class ExemploOrdenacaoSet {
             System.out.println(serie.getNome() + " - "
                     + serie.getGenero() + " - " + serie.getDuracao());
 
+        System.out.println("--\tOrdem Nome Serie\t--");
+        Set<Serie> minhaSeries6 = new TreeSet<>(new ComparatorNome());
+        minhaSeries6.addAll(minhaSeries);
+        for (Serie serie : minhaSeries6)
+            System.out.println(serie.getNome() + " - "
+                    + serie.getGenero() + " - " + serie.getDuracao());
+
 
         //Pra você
 /*        System.out.println("--\tOrdem gênero\t--");
 
-          System.out.println("--\tOrdem Tempo Episódio\t--");
+          System.out.println("--\tOrdem Tempo Nome Episodio\t--");
  */
 
     }
@@ -162,6 +169,16 @@ class ComparatorGenero implements Comparator<Serie>{
         int genero = serie1.getGenero().compareTo(serie2.getGenero());
         if(genero != 0) return genero;
         return Integer.compare(serie1.getDuracao(), serie2.getDuracao());
+    }
+}
+class ComparatorNome implements Comparator<Serie>{
+
+    @Override
+    public int compare(Serie serie1, Serie serie2) {
+        int nome = serie1.getNome().compareTo(serie2.getNome());
+        if (nome != 0) return nome;
+        return Integer.compare(serie1.getDuracao(), serie2.getDuracao());
+
     }
 }
 
