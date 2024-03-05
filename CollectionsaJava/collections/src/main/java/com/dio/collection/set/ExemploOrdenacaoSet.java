@@ -18,8 +18,10 @@ public class ExemploOrdenacaoSet {
         System.out.println("--\tOrdem aleatória\t--");
         Set<Serie> minhaSeries = new HashSet<>() {{
             add(new Serie("got", "fantasia", 60));
-            add(new Serie("dark", "drama", 60));
+            add(new Serie("dark", "suspense", 60));
             add(new Serie("that '70s show", "fantasia", 25));
+            add(new Serie("grays anatomy", "drama", 45));
+            add(new Serie("broklyn 99", "comedia", 15));
         }};
         for (Serie serie : minhaSeries)
             System.out.println(serie.getNome() + " - "
@@ -48,6 +50,14 @@ public class ExemploOrdenacaoSet {
         for (Serie serie : minhaSeries4)
             System.out.println(serie.getNome() + " - "
                     + serie.getGenero() + " - " + serie.getDuracao());
+        System.out.println("--\tOrdem gênero\t--");
+        Set<Serie> minhaSeries5 = new TreeSet<>(new ComparatorGenero());
+        minhaSeries5.addAll(minhaSeries);
+
+        for (Serie serie : minhaSeries5)
+            System.out.println(serie.getNome() + " - "
+                    + serie.getGenero() + " - " + serie.getDuracao());
+
 
         //Pra você
 /*        System.out.println("--\tOrdem gênero\t--");
@@ -118,7 +128,6 @@ class Serie implements Comparable<Serie> {
         return Objects.hash(nome, genero, duracao);
     }
 
-
     @Override
     public int compareTo(Serie serie) {
         int tempo = Integer.compare(this.getDuracao(), serie.getDuracao());
@@ -139,6 +148,20 @@ class ComparatorNomeGeneroDuracao implements Comparator<Serie>{
         return Integer.compare(serie1.getDuracao(), serie2.getDuracao());
 
 
+    }
+}
+class ComparatorGenero implements Comparator<Serie>{
+
+    @Override
+    public int compare(Serie serie1, Serie serie2) {
+        /*
+        Anotação: em Set quando verificamos os conteudos , os que são iguais eles são sobrescritos.
+        Assim criamos a variavel genero para verificar primeiro se o que esta sendo verificando não é igual
+        se for ele passa a fazer a ordenação por  duração e não pelo genero
+         */
+        int genero = serie1.getGenero().compareTo(serie2.getGenero());
+        if(genero != 0) return genero;
+        return Integer.compare(serie1.getDuracao(), serie2.getDuracao());
     }
 }
 
