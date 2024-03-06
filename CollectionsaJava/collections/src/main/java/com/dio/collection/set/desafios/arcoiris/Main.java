@@ -66,7 +66,7 @@ public class Main {
         Iterator<String> iterator = corArcoIris2.iterator();
         while(iterator.hasNext()){
             String cor = iterator.next();
-            if(cor.toLowerCase().startsWith("v"))iterator.remove();
+            if(!cor.toLowerCase().startsWith("v"))iterator.remove();
         }
         for ( String cor : corArcoIris2) {
             System.out.print( " | " + cor);
