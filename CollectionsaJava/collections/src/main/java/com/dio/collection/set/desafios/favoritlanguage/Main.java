@@ -37,6 +37,12 @@ public class Main {
             System.out.println(linguagem);
         }
 
+        System.out.println("---\tOrdem de Natural(Nome)\t----");
+        Set<LinguagemFavorita> minhasLinguagensFavoritas2 = new TreeSet<>(minhasLinguagensFavoritas);
+        for (LinguagemFavorita linguagem: minhasLinguagensFavoritas2) {
+            System.out.println(linguagem);
+        }
+
 
     }
 }
@@ -101,8 +107,8 @@ class LinguagemFavorita implements Comparable<LinguagemFavorita> {
 
 
     @Override
-    public int compareTo(LinguagemFavorita o) {
-        return 0;
+    public int compareTo(LinguagemFavorita linguagem) {
+        return this.getNome().compareToIgnoreCase(linguagem.getNome());
     }
 }
 
