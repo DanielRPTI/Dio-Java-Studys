@@ -50,9 +50,20 @@ public class ExemploMap {
         for (Map.Entry<String, Double> entry: entries) {
             if(entry.getValue().equals(melhorConsumo)) {
                 modeloMaisEficiente = entry.getKey();
-                System.out.println("Modelos mais eficientes" + modeloMaisEficiente + " com o melhor consumo: " + melhorConsumo);
+                System.out.println("Modelos mais eficientes " + modeloMaisEficiente + " com o melhor consumo: " + melhorConsumo);
             };
         }
+
+        Double piorConsumo = Collections.min(carrosPopulares.values());
+        Set<Map.Entry<String, Double>> entries1 = carrosPopulares.entrySet();
+        String modeloPiorConsumo = "";
+        for (Map.Entry<String, Double> entry: entries1 ) {
+            if(entry.getValue().equals(piorConsumo)){
+                modeloPiorConsumo = entry.getKey();
+                System.out.println("Modelo com o consumo menos eficiente " + modeloPiorConsumo + " com o pior consumo de: "+ piorConsumo );
+            }
+        }
+        
 
 
 

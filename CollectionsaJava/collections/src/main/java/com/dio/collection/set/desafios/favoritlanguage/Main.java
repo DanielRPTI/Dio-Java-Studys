@@ -37,41 +37,41 @@ public class Main {
             System.out.println(linguagem);
         }
 
-<<<<<<< HEAD
+
         System.out.println("---\tOrdem de Natural(Nome)\t----");
         Set<LinguagemFavorita> minhasLinguagensFavoritas2 = new TreeSet<>(minhasLinguagensFavoritas);
         for (LinguagemFavorita linguagem : minhasLinguagensFavoritas2) {
             System.out.println(linguagem);
         }
 
-=======
-        System.out.println("\n---\tOrdem de Natural(Nome)\t----");
-        Set<LinguagemFavorita> minhasLinguagensFavoritas2 = new TreeSet<>(minhasLinguagensFavoritas);
-        for (LinguagemFavorita linguagem: minhasLinguagensFavoritas2) {
-            System.out.println(linguagem);
-        }
 
-        System.out.println("\n---\tOrdem por IDE\t----");
-        Set<LinguagemFavorita> minhasLinguagensFavoritas3 = new TreeSet<>(new ComparatorIde());
-        minhasLinguagensFavoritas3.addAll(minhasLinguagensFavoritas);
+        System.out.println("\n---\tOrdem de Natural(Nome)\t----");
+        Set<LinguagemFavorita> minhasLinguagensFavoritas3 = new TreeSet<>(minhasLinguagensFavoritas);
         for (LinguagemFavorita linguagem: minhasLinguagensFavoritas3) {
             System.out.println(linguagem);
         }
 
-        System.out.println("\n---\tOrdem por Ano de Criação e Nome\t----");
-        Set<LinguagemFavorita> minhasLinguagensFavoritas4 = new TreeSet<>(new ComparatorAnoNome());
+        System.out.println("\n---\tOrdem por IDE\t----");
+        Set<LinguagemFavorita> minhasLinguagensFavoritas4 = new TreeSet<>(new ComparatorIde());
         minhasLinguagensFavoritas4.addAll(minhasLinguagensFavoritas);
         for (LinguagemFavorita linguagem: minhasLinguagensFavoritas4) {
             System.out.println(linguagem);
         }
 
-        System.out.println("\n---\tOrdem por  Nome|Ano de Criação|IDE|\t----");
-        Set<LinguagemFavorita> minhasLinguagensFavoritas5 = new TreeSet<>(new ComparatorAnoNomeIde());
+        System.out.println("\n---\tOrdem por Ano de Criação e Nome\t----");
+        Set<LinguagemFavorita> minhasLinguagensFavoritas5 = new TreeSet<>(new ComparatorAnoNome());
         minhasLinguagensFavoritas5.addAll(minhasLinguagensFavoritas);
         for (LinguagemFavorita linguagem: minhasLinguagensFavoritas5) {
             System.out.println(linguagem);
         }
->>>>>>> 92494c22509e444ddc7256b5a384fcc61043efa8
+
+        System.out.println("\n---\tOrdem por  Nome|Ano de Criação|IDE|\t----");
+        Set<LinguagemFavorita> minhasLinguagensFavoritas6 = new TreeSet<>(new ComparatorAnoNomeIde());
+        minhasLinguagensFavoritas6.addAll(minhasLinguagensFavoritas);
+        for (LinguagemFavorita linguagem: minhasLinguagensFavoritas6) {
+            System.out.println(linguagem);
+        }
+
 
     }
 }
@@ -137,10 +137,8 @@ class LinguagemFavorita implements Comparable<LinguagemFavorita> {
 
     @Override
     public int compareTo(LinguagemFavorita linguagem) {
-<<<<<<< HEAD
+
        return this.getNome().compareToIgnoreCase(linguagem.getNome());
-=======
-        return this.getNome().compareToIgnoreCase(linguagem.getNome());
     }
 }
 class ComparatorIde implements Comparator<LinguagemFavorita>{
@@ -168,7 +166,7 @@ class ComparatorAnoNomeIde implements Comparator<LinguagemFavorita>{
         if (nome != 0)return nome;
         if(anoCriacao != 0) return anoCriacao;
         return linguagem1.getIDE().compareToIgnoreCase(linguagem2.getIDE());
->>>>>>> 92494c22509e444ddc7256b5a384fcc61043efa8
+
     }
 }
 
