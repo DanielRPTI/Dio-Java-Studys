@@ -74,12 +74,19 @@ public class ExemploStream {
             System.out.println(entry.getKey() + " - " + entry.getValue().getNumero() + ": " + entry.getValue().getNome());
         }
         System.out.println("--\tOrdem nome contato\t--");
-        //precisamos organizar os valores. Logo:
-        Set<Map.Entry<Integer, Contato>> set1 = new TreeSet<>(new ComparatorOrdemNomeContato());
+
+        //lambda Contato
+        Set<Map.Entry<Integer, Contato>> set1 = new TreeSet<>(Comparator.comparing(nomeCont -> nomeCont.getValue().getNome()));
         set1.addAll(agenda.entrySet());
         for (Map.Entry<Integer, Contato> entry : set1) {
             System.out.println(entry.getKey() + " - " + entry.getValue().getNome());
         }
+        //antigo Comparator com class
+//        Set<Map.Entry<Integer, Contato>> set1 = new TreeSet<>(new ComparatorOrdemNomeContato());
+//        set1.addAll(agenda.entrySet());
+//        for (Map.Entry<Integer, Contato> entry : set1) {
+//            System.out.println(entry.getKey() + " - " + entry.getValue().getNome());
+//        }
     }
 }
 
@@ -90,9 +97,9 @@ public class ExemploStream {
 //    }
 //}
 
-class ComparatorOrdemNomeContato implements Comparator<Map.Entry<Integer, Contato>> {
-    @Override
-    public int compare(Map.Entry<Integer, Contato> cont1, Map.Entry<Integer, Contato> cont2) {
-        return cont1.getValue().getNome().compareToIgnoreCase(cont2.getValue().getNome());
-    }
-}
+//class ComparatorOrdemNomeContato implements Comparator<Map.Entry<Integer, Contato>> {
+//    @Override
+//    public int compare(Map.Entry<Integer, Contato> cont1, Map.Entry<Integer, Contato> cont2) {
+//        return cont1.getValue().getNome().compareToIgnoreCase(cont2.getValue().getNome());
+//    }
+//}
