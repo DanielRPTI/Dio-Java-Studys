@@ -1,5 +1,6 @@
 package br.com.dio.desafio.dominio;
 
+//Class Pai abstrata para ser utilizada para ter as classes filhas que peertencem a class Conteudo
 public abstract class Conteudo {
 
     protected static final double XP_PADRAO = 10d;
