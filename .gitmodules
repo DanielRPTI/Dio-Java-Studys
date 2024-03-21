@@ -1,0 +1,3 @@
+[submodule "GradleCourse"]
+	path = GradleCourse
+	url = https://github.com/bmartho/GradleCourse.git
